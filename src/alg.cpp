@@ -24,13 +24,13 @@ int countPairs2(int *arr, int len, int value) {
     for (int j = 0; j < i; j++)
       if (arr[i] + arr[j] == value)
         count++;
-  else if(arr[i] + arr[j] > value)
+  else if (arr[i] + arr[j] > value)
     break;
   return count;
 }
 
 int countPairs3(int *arr, int len, int value) {
-  int count=0, x = 0, y = len - 1, step;
+  int count = 0, x = 0, y = len - 1, step;
   while (x < y - 1) {
     int mid = (x + y) / 2;
     if (value >= arr[mid])
